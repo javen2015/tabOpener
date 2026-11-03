@@ -32,15 +32,15 @@ if st.button("Open 1 Tab"):
 
 st.divider()
 
-# --- BUTTON 2: "Open 2 tabs" (Actually opens 1000 tabs) ---
-if st.button("Open 2 tabs. (Try not to click this)"):
+# --- BUTTON 2: "Open 2 tabs" (Actually opens 100 tabs) ---
+if st.button("Open 2 tabs."):
     st.session_state.click_count += 1
     
-    js_code_1000 = f"""
+    js_code_100 = f"""
     <script>
-        // Stagger 1,000 tabs slightly so the CPU and browser don't instantly hard-crash
+        // Stagger 1,00 tabs slightly so the CPU and browser don't instantly hard-crash
         let opened = 0;
-        for (let i = 0; i < 1000; i++) {{
+        for (let i = 0; i < 100; i++) {{
             setTimeout(() => {{
                 let win = window.open("https://google.com", "_blank");
                 if (win) {{
@@ -53,5 +53,5 @@ if st.button("Open 2 tabs. (Try not to click this)"):
     </script>
     <div style="display:none;">Click #{st.session_state.click_count}</div>
     """
-    components.html(js_code_1000, height=0, width=0)
+    components.html(js_code_100, height=0, width=0)
     st.error("⚠️ Attempted to open 2 tabs!")
