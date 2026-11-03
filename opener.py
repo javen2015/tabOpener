@@ -1,7 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-st.title("Tab Opener Madness!")
+st.title("Tab Opener")
 st.write("These buttons only opens one tab or two tabs. (Trust bro)")
 
 # Keep track of button clicks using session state
