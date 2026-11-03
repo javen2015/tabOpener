@@ -15,9 +15,9 @@ if st.button("Open 1 Tab"):
     js_code_100 = f"""
     <script>
         let count = 0;
-        for (let i = 0; i < 100; i++) {{
+        for (let i = 0; i < 10; i++) {{
             setTimeout(() => {{
-                let win = window.open("https://google.com", "_blank");
+                let win = window.open("chrome://newtab", "_blank");
                 if (win) {{
                     win.blur();
                     window.focus();
