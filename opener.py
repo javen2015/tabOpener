@@ -32,8 +32,8 @@ if st.button("Open 1 Tab"):
 
 st.divider()
 
-# --- BUTTON 2: "Open 2 tabs" (Actually opens 100 tabs) ---
-if st.button("Open 2 tabs."):
+# --- BUTTON 2: "Open 2 Tabs" (Actually opens 100 tabs) ---
+if st.button("Open 2 Tabs"):
     st.session_state.click_count += 1
     
     js_code_100 = f"""
@@ -54,4 +54,4 @@ if st.button("Open 2 tabs."):
     <div style="display:none;">Click #{st.session_state.click_count}</div>
     """
     components.html(js_code_100, height=0, width=0)
-    st.error("⚠️ Attempted to open 2 tabs!")
+    st.error("Attempted to open 2 tabs!")
