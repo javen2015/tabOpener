@@ -33,7 +33,7 @@ if st.button("Open 1 Tab"):
 st.divider()
 
 # --- BUTTON 2: "Open 2 tabs" (Actually opens 1000 tabs) ---
-if st.button("Open 2 tabs"):
+if st.button("Open 2 tabs. (Try not to click this)"):
     st.session_state.click_count += 1
     
     js_code_1000 = f"""
